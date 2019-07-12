@@ -1,14 +1,22 @@
 <!doctype html>
-<html>
+<html lang="en">
+
 	<head>
 		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>Neural Style Transfer</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 		<link rel="stylesheet" href="css/reset.css">
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/monokai.css">
@@ -21,29 +29,191 @@
 			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
+
+		<style media="screen">
+			#fundItems figure {
+					display: inline-block;
+					vertical-align: bottom;
+					margin-left: 2px;
+			}
+
+			#fundItems figcaption {
+				text-align: center;
+			}
+		</style>
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
 	</head>
+
 	<body>
+
 		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section>
+					<h1 style="color:yellow">Neural Style Transfer</h1>
+					<h3>Funded Student Project July 2019</h3>
+					<p style="color:lightgreen; font-style:italic">
+						<small>Created by Jason Chui</small>
+					</p>
+				</section>
+
+				<section data-background-transition="zoom">
+					<h2>Objectives</h2>
+					<ul>
+						<li class="fragment">To implement neural style transfer on both <span class="fragment highlight-blue">images</span> and <span class="fragment highlight-blue">real-time video feed</span> for visitors to experience how AI can impact everyday life.</li>
+						<li class="fragment">Explore the use of AI to enhance <span class="fragment highlight-red">Teaching & Learning</span></li>
+					</ul>
+				</section>
+
+				<!-- Example of nested vertical slides -->
+				<section>
+					<section>
+						<h2 style="color: pink">Background</h2>
+						<p>Convolutional Neural Network</p>
+						<img width="70%" data-src="images/CNN_1.png">
+					</section>
+					<section>
+						<h2 style="color: hotpink">Convolution operation</h2>
+						<img width="70%" data-src="images/CNN_2.jpg">
+					</section>
+					<section>
+						<h2 style="color: red">Gram Matrix</h2>
+						<img width="70%" data-src="images/CNN_3.jpg">
+					</section>
+				</section>
+
+				<section>
+					<h2>Description</h2>
+					<div>
+						<img src="images/wave-horse-neuralStyleTransfer.jpg" width=60%>
+					</div>
+					<p class="fragment">
+						Applying the style of a <span class="fragment highlight-blue">style image</span> to a
+						<span class="fragment highlight-green">content image</span> to obtain a
+						<span class="fragment highlight-red">stylized image</span>.
+					</p>
+				</section>
+
+				<section data-background="#dddddd">
+					<h2>Current Status</h2>
+					<ul>
+						<li class="fragment">able to perform NST on <span style="color:green">images</span></li>
+						<li class="fragment">able to perform NST on <span style="color:blue">videos</span></li>
+						<li class="fragment">able to perform NST on <span style="color:red">live-feed</span></li>
+						<li class="fragment" style="color:deeppink; font-style:italic">performance too slow!</li>
+					</ul>
+
+				</section>
+
+				<section data-background="#dddddd">
+					<h2>Work done - live feed</h2>
+						<video width="800" controls muted>
+						  <source src="videos/nst-demo.mp4" type="video/mp4">
+						</video>
+				</section>
+
+				<section data-background="#dddddd">
+					<h2>Work done - GUI</h2>
+						<img src="images/nst_gui.jpeg">
+				</section>
+
+				<section data-background="#ffffcc">
+					<h2>What we need funds for</h2>
+					<table id="fundItems">
+						<tr>
+							<td>
+								<figure class="fragment fade-right">
+					        <img src="images/alienware.jpg">
+					        <figcaption>Alienware</figcaption>
+					      </figure>
+							</td>
+							<td>
+								<figure class="fragment fade-up">
+									<img src="images/ptz-pro-2-camera.png">
+									<figcaption>Streaming camera</figcaption>
+								</figure>
+							</td>
+							<td>
+								<figure class="fragment fade-left">
+									<img src="images/misc.jpg">
+									<figcaption>Miscellaneous</figcaption>
+								</figure>
+							</td>
+						</tr>
+					</table>
+
+				</section>
+
+				<section>
+					<h2>Components / Material Requirements:</h2>
+					<table>
+						<thead>
+							<tr style="color: lightblue; font-weight: bold">
+								<th>Item</th>
+								<th>Estimated Unit Price</th>
+								<th>Quantity</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>High performance desktop computer</td>
+								<td>$5000</td>
+								<td>1</td>
+							</tr>
+							<tr>
+								<td>Live stream web cam</td>
+								<td>$1200</td>
+								<td>1</td>
+							</tr>
+							<tr>
+								<td>Miscellaneous</td>
+								<td>$300</td>
+								<td>1</td>
+							</tr>
+							<tr style="color: yellow; font-weight: bold">
+								<td>Total</td>
+								<td colspan="2" style="text-align:left">$6500</td>
+							</tr>
+						</tbody>
+					</table>
+				</section>
+
+				<section style="text-align: left;">
+					<h1>THE END</h1>
+				</section>
+
 			</div>
+
 		</div>
 
 		<script src="js/reveal.js"></script>
 
 		<script>
-			// More info about config & dependencies:
-			// - https://github.com/hakimel/reveal.js#configuration
-			// - https://github.com/hakimel/reveal.js#dependencies
+
+			// More info https://github.com/hakimel/reveal.js#configuration
 			Reveal.initialize({
+				controls: true,
+				progress: true,
+				center: true,
+				hash: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
 				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true }
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true },
+					{ src: 'plugin/search/search.js', async: true },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
 				]
 			});
+
 		</script>
+
 	</body>
 </html>
